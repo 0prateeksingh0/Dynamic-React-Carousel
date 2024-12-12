@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.carousel-wrapper {
+  max-width: 1200px;
+  width: 90%; /* Adds some space on the sides */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-item {
+  flex: 1;
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  transition: flex 0.5s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item:nth-child(2) {
+  flex: 2; /* Make the middle image wider by default */
+}
+
+.carousel-item.expanded {
+  flex: 4; /* Expand fully on hover */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.expanded img {
+  transform: scale(1.1); /* Zoom effect for expanded item */
+}
+
+.carousel-item:not(.expanded):nth-child(2) {
+  flex: 2; /* Keep the middle image larger even when not hovered */
+}
+
+.caption {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Changed from left: 10px to right: 10px */
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow.hidden {
+  display: none;
+}
