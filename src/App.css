@@ -16,7 +16,7 @@ body {
 
 .carousel-wrapper {
   max-width: 1200px;
-  width: 90%; /* Adds some space on the sides */
+  width: 90%;
 }
 
 .carousel {
@@ -37,11 +37,11 @@ body {
 }
 
 .carousel-item:nth-child(2) {
-  flex: 2; /* Make the middle image wider by default */
+  flex: 2;
 }
 
 .carousel-item.expanded {
-  flex: 4; /* Expand fully on hover */
+  flex: 4;
 }
 
 .carousel-item img {
@@ -52,11 +52,11 @@ body {
 }
 
 .carousel-item.expanded img {
-  transform: scale(1.1); /* Zoom effect for expanded item */
+  transform: scale(1.1);
 }
 
 .carousel-item:not(.expanded):nth-child(2) {
-  flex: 2; /* Keep the middle image larger even when not hovered */
+  flex: 2;
 }
 
 .caption {
@@ -73,7 +73,7 @@ body {
 .arrow {
   position: absolute;
   top: 10px;
-  right: 10px; /* Changed from left: 10px to right: 10px */
+  right: 10px;
   font-size: 2rem;
   font-weight: bold;
   color: white;
